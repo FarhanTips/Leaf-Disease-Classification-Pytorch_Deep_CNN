@@ -1,15 +1,14 @@
-
 # 🌿 PlantGuard: Plant Disease Classification using Deep CNN with PyTorch
 
 PlantGuard is a deep learning-based plant disease classification system built using **PyTorch** and **Convolutional Neural Networks (CNN)**.  
-It is trained on the **PlantVillage dataset** to classify healthy and diseased plant leaves across multiple crop species.
+It is trained on the **PlantVillage dataset** to classify plant leaf images into **38 different classes** including healthy and diseased leaves.
 
 ---
 
 ## 📌 Project Overview
 
-This project focuses on automating plant disease detection using image classification.  
-The model learns visual patterns from leaf images and predicts the corresponding disease class or healthy status.
+This project automates plant disease detection using image classification.  
+The model learns visual patterns from leaf images and predicts the corresponding class among multiple crop diseases and healthy conditions.
 
 ---
 
@@ -18,7 +17,9 @@ The model learns visual patterns from leaf images and predicts the corresponding
 - **Dataset:** PlantVillage Dataset  
 - **Total Images:** ~54,000+  
 - **Crop Species:** 14  
-- **Classes:** Healthy + Multiple diseases (17 diseases, 4 bacterial, 2 viral, 2 fungal, etc.)
+- **Classes:** **38 total classes**
+  - Healthy leaves
+  - Various fungal, bacterial, viral diseases
 
 ---
 
@@ -47,22 +48,33 @@ A custom **Deep CNN** model is used with:
 
 ## 🚀 Training Pipeline
 
-1. Load and preprocess dataset
-2. Apply transformations (Resize, Normalize, Tensor conversion)
-3. Train CNN model using CrossEntropyLoss
+1. Load PlantVillage dataset
+2. Apply preprocessing (Resize, Normalize, ToTensor)
+3. Train Deep CNN using CrossEntropyLoss
 4. Optimize using Adam optimizer
-5. Evaluate on test dataset
+5. Evaluate on validation/test dataset
 
 ---
 
 ## 📈 Results
 
-- High training accuracy achieved
-- Strong generalization on test dataset
-- Minimal overfitting observed
-
-*(You can update this section with exact accuracy values)*
+- Training Accuracy: ~88.6%
+- Testing Accuracy: ~87.0%
+- Good generalization with minimal overfitting
 
 ---
 
-## 📂 Project Structure
+
+---
+
+## ▶️ How to Run
+
+### 1. Clone repository
+```bash
+git clone https://github.com/your-username/plantguard-pytorch-cnn.git
+cd plantguard-pytorch-cnn
+
+
+pip install torch torchvision numpy pillow
+
+python test.py
