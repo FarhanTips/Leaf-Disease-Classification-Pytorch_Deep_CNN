@@ -1,4 +1,4 @@
-# Leaf-Disease-Classification-Pytorch_Deep_CNN
+
 # 🌿 PlantGuard: Plant Disease Classification using Deep CNN with PyTorch
 
 PlantGuard is a deep learning-based plant disease classification system built using **PyTorch** and **Convolutional Neural Networks (CNN)**.  
